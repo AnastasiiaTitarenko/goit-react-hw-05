@@ -5,7 +5,7 @@ import css from "./MovieCast.module.css";
 
 export default function MovieCast() {
     const { movieId } = useParams();
-    const [cats, setCast] = useState([]);
+    const [cast, setCast] = useState([]);
 
     useEffect(() => {
         const fetchCast = async () => {
