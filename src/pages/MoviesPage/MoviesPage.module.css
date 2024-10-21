@@ -1,0 +1,33 @@
+.moviesPage {
+  padding: 20px;
+}
+
+.pageTitle {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.searchForm {
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  font-size: 1em;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.searchButton:hover {
+  background-color: #0056b3;
+}

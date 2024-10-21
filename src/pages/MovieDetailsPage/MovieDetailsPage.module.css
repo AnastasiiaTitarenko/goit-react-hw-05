@@ -1,0 +1,48 @@
+.pageContainer {
+  max-width: 800px;
+
+  padding: 20px;
+}
+
+.pageTitle {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.movieImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.movieOverview {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.navLinks {
+  margin-bottom: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.navLink:hover {
+  color: #007bff;
+  background-color: #e0e0e0;
+}
+
+.active {
+  color: #fff;
+  background-color: #007bff;
+  transform: scale(1.1);
+}
