@@ -14,7 +14,7 @@ export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
-  const prevLocationState = useRef(location.state);
+ const prevLocationState = useRef(location?.state?.from ?? "/");
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -42,19 +42,22 @@ export default function MovieDetailsPage() {
 
   if (!movie) return <div>Loading...</div>;
 
-  const goBack = () => {
-    if (prevLocationState.current) {
-      navigate(-1, { state: prevLocationState.current });
-    } else {
-      navigate(-1);
-    }
-  };
+  // const goBack = () => {
+  //   if (prevLocationState.current) {
+  //     navigate(-1, { state: prevLocationState.current });
+  //   } else {
+  //     navigate(-1);
+  //   }
+  // };
 
   return (
     <div className={css.pageContainer}>
-      <button onClick={goBack} className={css.navLink}>
+      <Link to={prevLocationState.current} className={css.navLink}>
+    Go back
+   </Link>
+      {/* <button onClick={goBack} className={css.navLink}>
         Go back
-      </button>
+      </button> */}
       <h1 className={css.pageTitle}>{movie.title}</h1>
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
